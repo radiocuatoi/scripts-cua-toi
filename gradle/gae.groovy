@@ -1,3 +1,6 @@
+def buildCredentials = System.env["BUILD_CREDENTIALS"]
+buildCredentials = buildCredentials != null ? buildCredentials : System.properties["cuatoi.buildCredentials"]
+
 println '''To enable GAE support:
 - add googleAppEngine("projectName")
 - add the following config:

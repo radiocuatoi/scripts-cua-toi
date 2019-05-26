@@ -1,3 +1,6 @@
+def buildCredentials = System.env["BUILD_CREDENTIALS"]
+buildCredentials = buildCredentials != null ? buildCredentials : System.properties["cuatoi.buildCredentials"]
+
 println '''To enable Heroku support:
 - add heroku([[appName: "APP_NAME_1", email  : "EMAIL_1", apiKey : "API_KEY_1"],
               [appName: "APP_NAME_2", email  : "EMAIL_2", apiKey : "API_KEY_2"]])
